@@ -1,4 +1,4 @@
-<a href="">Proxima</a>
+<a href="">Proxima Aula</a>
 <?php
 
     class Pai {
