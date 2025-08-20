@@ -1,4 +1,4 @@
-<a href="metodos_internos.php">Proxima aula</a>
+<a href="construtor_destrutor.php">Proxima aula</a>
 
 <?php
 
@@ -51,7 +51,7 @@
 
         //métodos
         function resumirCardFunc() {
-            return "$this->nome possui $this->numFilhos filho(s)";
+            return $this->__get('nome') . " possui " . $this->__get('numFilhos') ." filho(s) e o  numero de telefone " . $this->__get('telefone');
         }
 
         function modificarNumFilhos($numFilhos) {
@@ -65,15 +65,17 @@
     $y->__set('nome', 'José');
     $y->__set('numFilhos', 2);
     $y->__set('telefone', '44 92000-9524');
-    //echo $y->resumirCardFunc();
-    echo $y->__get('nome') . ' possui ' . $y->__get('numFilhos') . ' filhos(s) e o numero de telefone ' . $y->__get('telefone');
+    echo $y->resumirCardFunc();
+
+    //echo $y->__get('nome') . ' possui ' . $y->__get('numFilhos') . ' filhos(s) e o numero de telefone ' . $y->__get('telefone');
 
     echo '<br>';
     $x = new Funcionario();
     $x->__set('nome', 'Maria');
     $x->__set('numFilhos', 0);
     $x->__set('telefone', '44 92000-8390');
+    echo $x->resumirCardFunc();
 
-    echo $x->__get('nome') . ' possui ' . $x->__get('numFilhos') . ' filhos(s) e o numero de telefone ' . $x->__get('telefone');
+    //echo $x->__get('nome') . ' possui ' . $x->__get('numFilhos') . ' filhos(s) e o numero de telefone ' . $x->__get('telefone');
 
 ?>
