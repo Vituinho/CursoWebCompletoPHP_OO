@@ -1,5 +1,3 @@
-<a href="getters_setters_magicos.php">Proxima aula</a>
-
 <?php
 
     //modelo
@@ -9,8 +7,21 @@
         public $nome = null;
         public $telefone = null;
         public $numFilhos = null;
+        public $cargo = null;
+        public $salario = null;
 
-        //getters setters
+
+
+        //getters setters (overloading / sobrecarga)
+        function __set($atributo, $valor) {
+            $this->$atributo = $valor;
+        }
+
+        function __get($atributo) {
+            return $this->$atributo;
+        }
+
+        /*
         function setNome($nome) {
             $this->nome = $nome;
         }
@@ -34,6 +45,7 @@
         function getTelefone() {
             return $this->telefone;
         }
+     */
 
         //métodos
         function resumirCardFunc() {
@@ -44,20 +56,22 @@
             //afetar um atributo do objeto
             $this->numFilhos = $numFilhos;
         }
-
+       
     }
 
     $y = new Funcionario();
-    $y->setNome('José');
-    $y->setNumFilhos(2);
-    $y->setTelefone('44 92000-9524');
+    $y->__set('nome', 'José');
+    $y->__set('numFilhos', 2);
+    $y->__set('telefone', '44 92000-9524');
     //echo $y->resumirCardFunc();
-    echo $y->getNome() . ' possui ' . $y->getNumFilhos() . ' filhos(s)';
+    echo $y->__get('nome') . ' possui ' . $y->__get('numFilhos') . ' filhos(s) e o numero de telefone ' . $y->__get('telefone');
 
     echo '<br>';
     $x = new Funcionario();
-    $x->setNome('Maria');
-    $x->setNumFilhos(0);
-    echo $x->getNome() . ' possui ' . $x->getNumFilhos() . ' filhos(s)';
+    $x->__set('nome', 'Maria');
+    $x->__set('numFilhos', 0);
+    $x->__set('telefone', '44 92000-8390');
+
+    echo $x->__get('nome') . ' possui ' . $x->__get('numFilhos') . ' filhos(s) e o numero de telefone ' . $x->__get('telefone');
 
 ?>
