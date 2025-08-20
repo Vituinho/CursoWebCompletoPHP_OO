@@ -1,4 +1,4 @@
-<a href="">Proxima Aula</a>
+<a href="atributos_e_metodos_estaticos.php">Proxima Aula</a>
 <?php
 
     class Pai {
