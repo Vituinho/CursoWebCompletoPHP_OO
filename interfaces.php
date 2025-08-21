@@ -1,3 +1,5 @@
+<a href="namespaces_parte1.php">Proxima aula</a>
+
 <?php
 
     interface EquipamentoEletronicoInterface {
