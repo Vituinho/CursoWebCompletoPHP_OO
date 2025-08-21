@@ -1,4 +1,4 @@
-<a href="">Proxima aula</a>
+<a href="tratamento_erros.php">Proxima aula</a>
 
 <?php
 
