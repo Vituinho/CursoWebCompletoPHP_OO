@@ -59,7 +59,7 @@
     $mail->Host       = 'smtp.zoho.com';                     //Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
     $mail->Username   = 'aprendiz370@gazin.net.br';                     //SMTP username
-    $mail->Password   = 'safadinho quer minha senha safad';                               //SMTP password
+    $mail->Password   = 'safadinho quer minha senha';                               //SMTP password
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;            //Enable implicit TLS encryption
     $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
