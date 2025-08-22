@@ -8,3 +8,5 @@
     require "../../app_send_mail/bibliotecas/src/POP3.php";
 
     require "../../app_send_mail/processa_envio.php";
+    
+?>
