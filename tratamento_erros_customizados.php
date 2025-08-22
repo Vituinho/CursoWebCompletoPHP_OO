@@ -1,3 +1,5 @@
+<a href="app_send_mail/index.php">App Send Mail</a>
+
 <?php
 
     class MinhaExceptionCustomizada extends Exception {
